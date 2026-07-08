@@ -1,1 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@theme {
+  --color-background: #f8f9ffcc;
+  --color-mainborder: #dbe3f0;
+  --color-button: #2563eb;
+  --color-ink:#0b1c30b3;
+  --color-nBack:#f8f9ff;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+}

@@ -2,5 +2,12 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.3.2",
     "tailwindcss": "^4.3.2"
+  },
+  "scripts": {
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwind-scrollbar": "^4.0.2"
   }
 }

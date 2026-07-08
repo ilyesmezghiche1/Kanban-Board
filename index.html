@@ -4,9 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css">
 </head>
-<body>
+<body class=" font-body min-h-screen bg-background">
+    <header class="flex flex-row justify-between items-center bg-background border-b border-b-mainborder w-full z-20 sticky top-0 py-3 px-4 ">
+        <h1 class="font-heading text-lg md:text-xl font-semibold truncate ">Project Workspace</h1>
+        <input class="flex items-center text-sm text-button font-body font-medium border border-button px-3 py-2 rounded-lg gap-1.5 hover:bg-blue-200 shrink-0 cursor-pointer"  type="button" value="+ Add Column">
+    </header>
+    <main class="px-4 py-5 bg-background  " >
+        <div class="flex flex-col bg-background md:flex-row gap-4 md:overflow-x-auto md:snap-x md:snap-mandatory pb-4 md:mx-4 md:px-4 scrollbar-thin">
+            <!-- the colums i do just one becuase it's injected  -->
+             <section class=" md:snap-start shrink-0 w-full md:w-80 border border-mainborder rounded-2xl p-3 ">
+                <div  id="columnheader" class="flex justify-between px-1 pb-3" >
+                    <div class="flex items-center gap-3">
+                        <h2 class="font-heading text-base font-bold text-button" > To Do</h2>
+                        <span class="w-6 h-6 flex justify-center items-center bg-blue-100 text-button font-bold text-xs rounded-2xl">3</span>
+                    </div>
+                    <div>
+                        <span class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                    </div>
+                </div>
+                <div id="card-container" class=" flex flex-col gap-3" >
+                    <!-- card one this will be injected  -->
+                    <article id="card" class="bg-white border border-mainborder p-4 rounded-2xl overflow-hidden relative ">
+                        <div class="fold absolute top-0 right-0" style="border-width: 0 28px 28px 0; border-color: transparent #2563eb transparent transparent;"></div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 id="title" class="font-heading font-semibold text-base leading-snug" >Define project Scope </h3>
+                            <div>
+                                <span id="more" class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="description" class="text-ink leading-relaxed text-sm mt-1.5" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nobis? </p>
+                        </div>
+                        <hr class=" border border-mainborder my-3">
+                        <div>
+                            <span id="createdAt" class="text-ink/60 tracking-wide uppercase text-[11px] font-mono py-1 px-2 bg-nBack rounded-sm font-semibold" >created 3 days ago </span>
+                        </div>
+                    </article>
+                    <!-- card 2 this also will be injected -->
+                    <article id="card" class="bg-white border border-mainborder p-4 rounded-2xl overflow-hidden relative ">
+                        <div class="fold absolute top-0 right-0" style="border-width: 0 28px 28px 0; border-color: transparent #2563eb transparent transparent;"></div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 id="title" class="font-heading font-semibold text-base leading-snug" >Define project Scope </h3>
+                            <div>
+                                <span id="more" class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="description" class="text-ink leading-relaxed text-sm mt-1.5" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nobis? </p>
+                        </div>
+                        <hr class=" border border-mainborder my-3">
+                        <div>
+                            <span id="createdAt" class="text-ink/60 tracking-wide uppercase text-[11px] font-mono py-1 px-2 bg-nBack rounded-sm font-semibold" >created 3 days ago </span>
+                        </div>
+                    </article>
+                    <!-- card 3 this also will be injected -->
+                    <article id="card" class="bg-white border border-mainborder p-4 rounded-2xl overflow-hidden relative ">
+                        <div class="fold absolute top-0 right-0" style="border-width: 0 28px 28px 0; border-color: transparent #2563eb transparent transparent;"></div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 id="title" class="font-heading font-semibold text-base leading-snug" >Define project Scope </h3>
+                            <div>
+                                <span id="more" class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="description" class="text-ink leading-relaxed text-sm mt-1.5" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nobis? </p>
+                        </div>
+                        <hr class=" border border-mainborder my-3">
+                        <div>
+                            <span id="createdAt" class="text-ink/60 tracking-wide uppercase text-[11px] font-mono py-1 px-2 bg-nBack rounded-sm font-semibold" >created 3 days ago </span>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="columnfooter" class="flex justify-center items-center">
+                    <input type="button" class="text-ink text-sm font-body py-3 border border-mainborder border-dashed rounded-2xl cursor-pointer w-full mt-3 hover:bg-blue-200 " value="+ Add Card">
+                </div>
+             </section>
+             <!-- this is 2 colums also will be injected -->
+             <section class=" md:snap-start shrink-0 w-full md:w-80 border border-mainborder rounded-2xl p-3 ">
+                <div  id="columnheader" class="flex justify-between px-1 pb-3" >
+                    <div class="flex items-center gap-3">
+                        <h2 class="font-heading text-base font-bold text-button" > To Do</h2>
+                        <span class="w-6 h-6 flex justify-center items-center bg-blue-100 text-button font-bold text-xs rounded-2xl">3</span>
+                    </div>
+                    <div>
+                        <span class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                    </div>
+                </div>
+                <div id="card-container" class=" flex flex-col gap-3" >
+                    <!-- card one this will be injected  -->
+                    <article id="card" class="bg-white border border-mainborder p-4 rounded-2xl overflow-hidden relative ">
+                        <div class="fold absolute top-0 right-0" style="border-width: 0 28px 28px 0; border-color: transparent #2563eb transparent transparent;"></div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 id="title" class="font-heading font-semibold text-base leading-snug" >Define project Scope </h3>
+                            <div>
+                                <span id="more" class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="description" class="text-ink leading-relaxed text-sm mt-1.5" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nobis? </p>
+                        </div>
+                        <hr class=" border border-mainborder my-3">
+                        <div>
+                            <span id="createdAt" class="text-ink/60 tracking-wide uppercase text-[11px] font-mono py-1 px-2 bg-nBack rounded-sm font-semibold" >created 3 days ago </span>
+                        </div>
+                    </article>
+                    <!-- card 2 this also will be injected -->
+                    <article id="card" class="bg-white border border-mainborder p-4 rounded-2xl overflow-hidden relative ">
+                        <div class="fold absolute top-0 right-0" style="border-width: 0 28px 28px 0; border-color: transparent #2563eb transparent transparent;"></div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 id="title" class="font-heading font-semibold text-base leading-snug" >Define project Scope </h3>
+                            <div>
+                                <span id="more" class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="description" class="text-ink leading-relaxed text-sm mt-1.5" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nobis? </p>
+                        </div>
+                        <hr class=" border border-mainborder my-3">
+                        <div>
+                            <span id="createdAt" class="text-ink/60 tracking-wide uppercase text-[11px] font-mono py-1 px-2 bg-nBack rounded-sm font-semibold" >created 3 days ago </span>
+                        </div>
+                    </article>
+                    <!-- card 3 this also will be injected -->
+                    <article id="card" class="bg-white border border-mainborder p-4 rounded-2xl overflow-hidden relative ">
+                        <div class="fold absolute top-0 right-0" style="border-width: 0 28px 28px 0; border-color: transparent #2563eb transparent transparent;"></div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 id="title" class="font-heading font-semibold text-base leading-snug" >Define project Scope </h3>
+                            <div>
+                                <span id="more" class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p id="description" class="text-ink leading-relaxed text-sm mt-1.5" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nobis? </p>
+                        </div>
+                        <hr class=" border border-mainborder my-3">
+                        <div>
+                            <span id="createdAt" class="text-ink/60 tracking-wide uppercase text-[11px] font-mono py-1 px-2 bg-nBack rounded-sm font-semibold" >created 3 days ago </span>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="columnfooter" class="flex justify-center items-center">
+                    <input type="button" class="text-ink text-sm font-body py-3 border border-mainborder border-dashed rounded-2xl cursor-pointer w-full mt-3 hover:bg-blue-200 " value="+ Add Card">
+                </div>
+             </section>
+             <!-- this is 3 colums i will use it for empty colums -->
+             <section class=" md:snap-start shrink-0 w-full md:w-80 border border-mainborder rounded-2xl p-3 ">
+                <div  id="columnheader" class="flex justify-between px-1 pb-3" >
+                    <div class="flex items-center gap-3">
+                        <h2 class="font-heading text-base font-bold text-button" > To Do</h2>
+                        <span class="w-6 h-6 flex justify-center items-center bg-blue-100 text-button font-bold text-xs rounded-2xl">3</span>
+                    </div>
+                    <div>
+                        <span class="relative shrink-0 cursor-pointer" ><i class="fa-solid fa-ellipsis"></i></span>
+                    </div>
+                </div>
+                <div id="contenet" class="flex flex-col items-center text-center gap-3 border border-mainborder border-dashed px-6 py-10 rounded-2xl">
+                    <div class="w-10 h-10 rounded-full border border-mainborder flex items-center justify-center text-ink/50 text-lg">+</div>
+                    <h3 class="font-heading font-bold text-base">Nothing here yet</h3>
+                    <p class="text-sm text-ink/60 leading-relaxed max-w-55">Finished tasks will land here once you move them over.</p>
+                    <button class="mt-1 bg-blue-200 text-button font-body font-medium text-sm px-4 py-2 rounded-full hover:brightness-95 transition cursor-pointer">
+                        + Add your first card
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
 
 </body>
 </html>
