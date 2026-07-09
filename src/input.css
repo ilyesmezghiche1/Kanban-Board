@@ -6,8 +6,66 @@
   --color-background: #f8f9ffcc;
   --color-mainborder: #dbe3f0;
   --color-button: #2563eb;
-  --color-ink:#0b1c30b3;
-  --color-nBack:#f8f9ff;
+  --color-ink: #0b1c30b3;
+  --color-nBack: #f8f9ff;
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
+}
+
+.swal-popup {
+  border-radius: 16px;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 1.5rem;
+}
+
+.swal-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.swal-input {
+  border: 1px solid #dbe3f0;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.swal-color-input {
+  border: 1px solid #dbe3f0;
+  border-radius: 10px;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 42px;
+}
+
+.swal-confirm {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.swal-cancel {
+  background-color: #f1f5f9;
+  color: #475569;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+.column-footer-btn {
+  background-color: transparent;
+  transition: background-color 0.15s ease;
+}
+.column-footer-btn:hover {
+  background-color: var(--hover-bg);
 }
