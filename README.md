@@ -4,11 +4,11 @@ A Trello-style task board built with vanilla JavaScript, Tailwind CSS v4, and lo
 
 ## Live Demo
 
-[Add your deployed Vercel link here]
+[https://kanban-board-lyart-ten-60.vercel.app/]
 
 ## Overview
 
-![Board overview](./screenshots/board-overview.png)
+![Board overview](./screenshots/Screenshot%202026-07-10%20134739.png)
 
 A board with multiple columns, each with its own color, card count, and cards inside.
 
@@ -23,7 +23,7 @@ The flowchart step was intentionally skipped for this project — the activity d
 
 ### Class diagram
 
-![Class diagram](./diagrams/class-diagram.png)
+![Class diagram](./diagrams/kanban_class_diagram_v2.png)
 
 > **Note:** this diagram currently still lists `renderCard()` / `renderColumn()` as class methods. The actual implementation moved rendering out of the classes entirely (see [Architecture](#architecture) below) — the diagram needs a small update in Edraw to drop those two lines and match the final code.
 
@@ -33,37 +33,37 @@ The flowchart step was intentionally skipped for this project — the activity d
 
 | Create Column | Create Card |
 |---|---|
-| ![Create column flow](./diagrams/activity-column.png) | ![Create card flow](./diagrams/activity-card.png) |
+| ![Create column flow](./diagrams/create_column_corrected.png) | ![Create card flow](./diagrams/create_card_corrected.png) |
 
 **Edit / Delete Card**
 
-![Edit and delete card flow](./diagrams/activity-edit-delete-card.png)
+![Edit and delete card flow](./diagrams/edit_delete_card_activity.png)
 
 **Drag and Drop**
 
-![Drag and drop flow](./diagrams/activity-dragdrop.png)
+![Drag and drop flow](./diagrams/drag_and_drop_activity_v2.png)
 
 **App overview**
 
-![App overview flow](./diagrams/app-overview-flow.png)
+![App overview flow](./diagrams/kanban_overview_corrected.png)
 
 ## Features
 
 ### Add a column
 
-![Add column modal](./screenshots/add-column-modal.png)
+![Add column modal](./screenshots/Screenshot%202026-07-10%20134811.png)
 
 Custom name and color, chosen via a color picker. Validates against empty names and duplicate column names before allowing submission.
 
 ### Add a card
 
-![Add card modal](./screenshots/add-card-modal.png)
+![Add card modal](./screenshots/Screenshot%202026-07-10%20134937.png)
 
 Title and description. The card's fold-corner accent automatically matches its parent column's color.
 
 ### Edit / Move / Delete a card
 
-![Card menu](./screenshots/card-menu.png)
+![Card menu](./screenshots/Screenshot%202026-07-10%20134906.png)
 
 Each card's "..." menu opens Edit, Move to (lists every other column to move the card into), and Delete. Columns have the same pattern for Edit/Delete.
 
@@ -73,13 +73,13 @@ Cards can be dragged directly between columns on desktop using native HTML5 drag
 
 ### Empty states
 
-![Empty board state](./screenshots/empty-state.png)
+![Empty board state](./screenshots/Screenshot%202026-07-10%20135022.png)
 
 Shown when there are no columns yet. A similar "No cards yet" placeholder appears inside any column with zero cards.
 
 ### Responsive layout
 
-![Mobile view](./screenshots/mobile-view.png)
+![Mobile view](./screenshots/Screenshot%202026-07-10%20134843.png)
 
 Columns stack vertically on mobile; on desktop (`md:` breakpoint and up) they switch to a horizontal, snap-scrolling row.
 
